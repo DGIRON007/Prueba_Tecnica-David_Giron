@@ -1,0 +1,186 @@
+﻿@{
+    ViewBag.Title = "Pagina de Inicio ";
+}
+<div class="jumbotron">
+    <h1> App de encuestas </h1>
+    <p class="lead"> Bienvenido a la app para generar tus encuestas .</p>
+
+</div>
+
+<br />
+
+&nbsp;
+
+ </button>
+
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Customer Form</title>
+        </head>
+        <body>
+            <form method="post">
+                <fieldset>
+                    <legend>Crea tu encuesta</legend>
+                    <div>
+                        <label for="Name">Nombre de Encuesta:</label>
+                        <input type="text" name="Name" value="" class="alert alert-info"/>
+                    </div>
+                    <div>
+                        <label for="desc">Descripcion de encuesta:</label>
+                        <input type="text" name="desc" value=""  class="alert alert-info" />
+                    </div>
+                    <div>
+                        <label for="cam">Campos:</label>
+                        <input type="datetime-local" name="cam" value=""  class="alert alert-info" />
+                    </div>
+                    <div>
+                        <label for="NCampo">Ingrese su pregunta:</label>
+                        <input type="text" name="NCampo" value=""  class="alert alert-info" />
+                    </div>
+                    <div>
+                        <label for="NCampo1">Ingrese su pregunta:</label>
+                        <input type="text" name="NCampo1" value=""  class="alert alert-info" />
+                    </div>
+                    <label for="NCampo2">Ingrese su pregunta:</label>
+                    <input type="text" name="NCampo2" value=""  class="alert alert-info" />
+
+</div>
+                    <div>
+                        <label>&nbsp;</label>
+                        <input type="submit" value="Generar encuesta" class="alert alert-danger" />
+                       
+
+                    </div>
+        </fieldset>
+    </form>
+</body>
+</html>
+        <br />
+
+<html>
+<head>
+    <title>Customer Form</title>
+</head>
+<body>
+    <form method="post">
+        <fieldset>
+            <legend>Encuesta</legend>
+            <div>
+                <label for="Name"></label>
+                <input type="text" name="Name"  class="alert alert-info"
+                       
+                       value="@Request.Form["Name"]" />
+                @Html.ValidationMessage("Name")
+            </div>
+            <div>
+                <label for="desc"></label>
+                <input type="text" name="desc"  class="alert alert-info"
+                       value="@Request.Form["desc"]" />
+                @Html.ValidationMessage("desc")
+            </div>
+            <div>
+                <label for="cam">Fecha:</label>
+                <input type="text" name="cam"  class="alert alert-info"
+                       value="@Request.Form["cam"]" />
+                @Html.ValidationMessage("cam")
+            </div>
+            <div>
+                <label for="NCampo"></label>
+                <input type="text" name="NCampo"  class="alert alert-info"
+                       value="@Request.Form["NCampo"]" />
+                @Html.ValidationMessage("NCampo")
+                <label for="res1">Ingrese  su respuesta:</label>
+                <input type="text" name="res1" value="" class="alert alert-success"/>
+
+            </div>
+            <div>
+                <label for="NCampo1"></label>
+                <input type="text" name="NCampo1" class="alert alert-info"
+                       value="@Request.Form["NCampo1"]" />
+                @Html.ValidationMessage("NCampo1")
+                <label for="res2">Ingrese  su respuesta:</label>
+                <input type="text" name="res2" value=""  class="alert alert-success"/>
+
+            </div>
+            <div>
+                <label for="NCampo2"></label>
+                <input type="text" name="NCampo2" class="alert alert-info"
+                       value="@Request.Form["NCampo2"]" />
+                @Html.ValidationMessage("NCampo2")
+                <label for="res3">Ingrese  su respuesta:</label>
+                <input type="text" name="res3" value="" class="alert alert-success" />
+
+
+            </div>
+            <label>&nbsp;</label>
+            <input type="submit" value="Enviar respuestas" class="alert alert-danger" />
+            </div>
+        </fieldset>
+    </form>
+</body>
+<br >
+
+<html>
+<head>
+    <title>Respuestas de la encuesta</title>
+</head>
+<body>
+    <form method="post">
+        <fieldset>
+            <legend>Respuestas</legend>
+            <div>
+                <label for="Name"></label>
+                <input type="text" name="Name" class="alert alert-info"
+                       value="@Request.Form["Name"]" />
+                @Html.ValidationMessage("Name")
+            </div>
+            </div>
+            <div>
+                <label for="desc"></label>
+                <input type="text" name="desc" class="alert alert-info"
+                       value="@Request.Form["desc"]" />
+                @Html.ValidationMessage("desc")
+            </div>
+            <div>
+                <label for="cam"></label>
+                <input type="text" name="cam" class="alert alert-info"
+                       value="@Request.Form["cam"]" />
+                @Html.ValidationMessage("cam")
+            </div>
+            <div>
+                <label for="NCampo"></label>
+                <input type="text" name="NCampo" class="alert alert-info"
+                       value="@Request.Form["NCampo"]" />
+                @Html.ValidationMessage("NCampo")
+
+                <label for="res1"></label>
+                <input type="text" name="res1" class="alert alert-success"
+                       value="@Request.Form["res1"]" />
+                @Html.ValidationMessage("res1")
+            </div>
+            <div>
+                <label for="NCampo1"></label>
+                <input type="text" name="NCampo1" class="alert alert-info"
+                       value="@Request.Form["NCampo1"]" />
+                @Html.ValidationMessage("NCampo1")
+                <label for="res2"></label>
+                <input type="text" name="res1" class="alert alert-success"
+                       value="@Request.Form["res2"]" />
+                @Html.ValidationMessage("res2")
+            </div>
+            <div>
+                <label for="NCampo2"></label>
+                <input type="text" name="NCampo2" class="alert alert-info"
+                       value="@Request.Form["NCampo2"]" />
+                @Html.ValidationMessage("NCampo2")
+                <label for="res3"></label>
+                <input type="text" name="res3" class="alert alert-success"
+                       value="@Request.Form["res3"]" />
+                @Html.ValidationMessage("res3")
+            </div>
+            <br />
+
+            &nbsp;
+            &nbsp;
